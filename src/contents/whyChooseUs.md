@@ -12,7 +12,7 @@ whyChooseUs:
 
       {
         id: 2,
-        title: 'Cheap as fuck',
+        title: 'Affordable prices',
         description: 'Lorem Ipsum is simply dummy text of the printing',
       },
 

@@ -1,29 +1,15 @@
 import { Link } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 
 const Navbar = () => {
-  const links = [
-    {
-      id: '1',
-      name: 'Home',
-      path: '/',
-    },
-    {
-      id: '2',
-      name: 'Properties',
-      path: '/properties',
-    },
-    {
-      id: '3',
-      name: 'About',
-      path: '/about',
-    },
-  ]
+  const data = useStaticQuery(query)
+  const navLinks = data.markdownRemark.frontmatter.navbar
   return (
     <div>
       <div>
         <Link to='/'>Golekno</Link>
-        {links.map(link => (
+        {navLinks.map(link => (
           <Link key={link.id} to={link.path}>
             {link.name}
           </Link>
@@ -34,3 +20,17 @@ const Navbar = () => {
 }
 
 export default Navbar
+
+const query = graphql`
+  query NavbarQuery {
+    markdownRemark(frontmatter: { name: { eq: "navbar" } }) {
+      frontmatter {
+        navbar {
+          id
+          name
+          path
+        }
+      }
+    }
+  }
+`

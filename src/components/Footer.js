@@ -1,17 +1,25 @@
 import React from 'react'
+import { graphql, useStaticQuery } from 'gatsby'
 
 const Footer = () => {
-  return <div>Footer</div>
+  const data = useStaticQuery(query)
+  const footer = data.markdownRemark.frontmatter.footer
+  return (
+    <div>
+      <p>{footer.description}</p>
+    </div>
+  )
 }
-// query MyQuery {
-//   markdownRemark(frontmatter: {name: {eq: "footer"}}) {
-//     id
-//     frontmatter {
-//       footer {
-//         description
-//       }
-//     }
-//   }
-// }
+const query = graphql`
+  query MyQuery {
+    markdownRemark(frontmatter: { name: { eq: "footer" } }) {
+      frontmatter {
+        footer {
+          description
+        }
+      }
+    }
+  }
+`
 
 export default Footer
