@@ -1,4 +1,5 @@
 ---
+name: properties
 properties:
   title: Find your best place
   description: From apartment to exclusive mansion

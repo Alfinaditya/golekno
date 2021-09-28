@@ -1,4 +1,5 @@
 ---
+name: whyChooseUs
 whyChooseUs:
   title: Why choose us ?
   reasons:

@@ -1,3 +1,5 @@
 ---
-footer: Made with 💛 by Golekno
+name: footer
+footer:
+  description: Made with 💛 by Golekno
 ---
