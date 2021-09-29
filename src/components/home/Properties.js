@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, useStaticQuery } from 'gatsby'
+import { graphql, Link, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 
 const Properties = () => {
@@ -9,6 +9,7 @@ const Properties = () => {
     <div>
       <h1>{properties.title}</h1>
       <p>{properties.description}</p>
+      <Link to={properties.ctaLink}>{properties.ctaText}</Link>
       {properties.property.map(property => (
         <div key={property.id}>
           <h1>{property.title}</h1>
@@ -31,6 +32,8 @@ const query = graphql`
         properties {
           title
           description
+          ctaText
+          ctaLink
           property {
             id
             title

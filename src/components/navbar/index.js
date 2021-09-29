@@ -1,21 +1,29 @@
-import { Link } from 'gatsby'
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
+import {
+  BrandLink,
+  Container,
+  Nav,
+  NavStyledLink,
+  ContainerNavStyledLink,
+} from './style'
 
 const Navbar = () => {
   const data = useStaticQuery(query)
   const navLinks = data.markdownRemark.frontmatter.navbar
   return (
-    <div>
-      <div>
-        <Link to='/'>Golekno</Link>
-        {navLinks.map(link => (
-          <Link key={link.id} to={link.path}>
-            {link.name}
-          </Link>
-        ))}
-      </div>
-    </div>
+    <Nav>
+      <Container>
+        <BrandLink to='/'>Golekno</BrandLink>
+        <ContainerNavStyledLink>
+          {navLinks.map(link => (
+            <NavStyledLink key={link.id} to={link.path}>
+              {link.name}
+            </NavStyledLink>
+          ))}
+        </ContainerNavStyledLink>
+      </Container>
+    </Nav>
   )
 }
 
