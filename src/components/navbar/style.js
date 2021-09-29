@@ -4,7 +4,6 @@ import { Link } from 'gatsby'
 export const Nav = styled.nav`
   background: var(--main-color);
 `
-
 export const NavStyledLink = styled(Link)`
   text-decoration: none;
   color: white;
