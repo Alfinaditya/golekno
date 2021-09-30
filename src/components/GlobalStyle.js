@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
   --cta-button-color:#313131;
   --cta-text-color:#FFFFFF;
   --jumbotron-color:#FCFCFC;
+  --icon-size:44px;
 }
   * {
     box-sizing: border-box;

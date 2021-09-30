@@ -2,7 +2,8 @@
 name: whyChooseUs
 whyChooseUs:
   title: Why choose us ?
-  reasons:
+  image: ../images/home/why-choose-us.jpg
+  reason_1:
     [
       {
         id: 1,
@@ -15,15 +16,17 @@ whyChooseUs:
         title: 'Affordable prices',
         description: 'Lorem Ipsum is simply dummy text of the printing',
       },
-
+    ]
+  reason_2:
+    [
       {
-        id: 3,
+        id: 1,
         title: 'Professional company',
         description: 'Lorem Ipsum is simply dummy text of the printing',
       },
 
       {
-        id: 4,
+        id: 2,
         title: 'Easy to use',
         description: 'Lorem Ipsum is simply dummy text of the printing',
       },
