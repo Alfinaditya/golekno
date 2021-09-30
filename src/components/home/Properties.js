@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql, Link, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import {
@@ -28,8 +28,8 @@ const Properties = () => {
       <PropertiesContainer>
         <Swiper slidesPerView={4}>
           {properties.property.map(property => (
-            <SwiperSlide>
-              <PropertyContainer key={property.id}>
+            <SwiperSlide key={property.id}>
+              <PropertyContainer>
                 <PropertyImage>
                   <GatsbyImage
                     image={getImage(

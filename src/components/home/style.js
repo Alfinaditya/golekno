@@ -141,7 +141,6 @@ export const ReasonTwo = styled.div`
 // Contents
 
 export const ContentsSection = styled.div`
-  /* width: 95%; */
   margin: auto;
   margin-bottom: 200px;
 `
@@ -149,7 +148,6 @@ export const ContentImage = styled.div`
   width: 701px;
   height: 377px;
 `
-
 export const ContentText = styled.div``
 export const ContentOne = styled.div`
   display: flex;
@@ -192,6 +190,32 @@ export const ContentButton = styled.p`
   &:hover {
     background: var(--main-color);
   }
+`
+// Reviews
+
+export const ReviewSection = styled.div`
+  font-size: 12px;
+  cursor: pointer;
+  margin-bottom: 200px;
+`
+
+export const ReviewContainer = styled.div`
+  margin: auto;
+  text-align: center;
+  width: 60%;
+`
+export const ReviewMessage = styled.p`
+  margin: 30px 0;
+`
+export const ReviewName = styled.p`
+  font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 4px;
+  color: var(--main-color);
+`
+export const ReviewJob = styled.p`
+  color: var(--black-color);
+  margin-bottom: 90px;
 `
 export const BadgeCheckIcon = styled(BadgeCheck)`
   width: var(--icon-size);
