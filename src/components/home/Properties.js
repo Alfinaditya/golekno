@@ -12,6 +12,8 @@ import {
   PropertyPrice,
   PropertiesLink,
   PropertiesSection,
+  PropertyDescription,
+  PropertyContainer,
 } from './style'
 import 'swiper/css'
 const Properties = () => {
@@ -21,13 +23,13 @@ const Properties = () => {
     <PropertiesSection>
       <PropertiesTitle>Find your best place</PropertiesTitle>
       <PropertiesDescription>
-        from apartment to exclusive mansion
+        From apartment to exclusive mansion
       </PropertiesDescription>
       <PropertiesContainer>
         <Swiper slidesPerView={4}>
           {properties.property.map(property => (
             <SwiperSlide>
-              <div key={property.id}>
+              <PropertyContainer key={property.id}>
                 <PropertyImage>
                   <GatsbyImage
                     image={getImage(
@@ -41,10 +43,14 @@ const Properties = () => {
                     }}
                   />
                 </PropertyImage>
-                <PropertyTitle>{property.title}</PropertyTitle>
-                <PropertyLocation>{property.location}</PropertyLocation>
-                <PropertyPrice>{property.price}</PropertyPrice>
-              </div>
+                <PropertyDescription>
+                  <div>
+                    <PropertyTitle>{property.title}</PropertyTitle>
+                    <PropertyLocation>{property.location}</PropertyLocation>
+                  </div>
+                  <PropertyPrice>{property.price}</PropertyPrice>
+                </PropertyDescription>
+              </PropertyContainer>
             </SwiperSlide>
           ))}
         </Swiper>

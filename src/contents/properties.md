@@ -46,5 +46,21 @@ properties:
         price: '$19.300',
         image: '../images/properties/property5.jpg',
       },
+
+      {
+        id: 6,
+        title: 'Kanye mansion',
+        location: 'Malibu night',
+        price: '$19.300',
+        image: '../images/properties/property6.jpg',
+      },
+
+      {
+        id: 7,
+        title: 'Kanye mansion',
+        location: 'Malibu night',
+        price: '$19.300',
+        image: '../images/properties/property7.jpg',
+      },
     ]
 ---

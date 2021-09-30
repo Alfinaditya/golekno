@@ -68,6 +68,8 @@ export const WhyChooseUsReasonDescription = styled.p`
   color: #b6b5b5;
   width: 247px;
 `
+export const WhyChooseUsReasons = styled.div``
+
 // Properties
 
 export const PropertiesSection = styled.div`
@@ -87,6 +89,8 @@ export const PropertiesDescription = styled.p`
 `
 export const PropertiesContainer = styled.div`
   display: flex;
+  align-items: center;
+  cursor: pointer;
 `
 export const PropertiesLink = styled(Link)`
   color: #969696;
@@ -96,14 +100,23 @@ export const PropertiesLink = styled(Link)`
   text-align: right;
   margin-right: 20px;
 `
-export const PropertyContainer = styled.div``
+export const PropertyContainer = styled.div`
+  margin: auto;
+  width: 278px;
+`
 export const PropertyImage = styled.div`
   width: 278px;
   height: 367px;
+  margin: auto;
 `
 export const PropertyTitle = styled.h1`
   font-weight: bold;
   font-size: 14px;
+  margin-top: 20px;
+`
+export const PropertyDescription = styled.div`
+  display: flex;
+  align-items: center;
 `
 export const PropertyLocation = styled.p`
   font-weight: 300;
@@ -125,7 +138,61 @@ export const ReasonTwo = styled.div`
   align-items: center;
   justify-content: space-between;
 `
-export const WhyChooseUsReasons = styled.div``
+// Contents
+
+export const ContentsSection = styled.div`
+  /* width: 95%; */
+  margin: auto;
+  margin-bottom: 200px;
+`
+export const ContentImage = styled.div`
+  width: 701px;
+  height: 377px;
+`
+
+export const ContentText = styled.div``
+export const ContentOne = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--jumbotron-color);
+  margin-bottom: 200px;
+  padding: 30px;
+`
+export const ContentTwo = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+`
+export const ContentTitle = styled.h1`
+  font-size: 44px;
+  color: var(--main-color);
+  width: 514px;
+  margin-bottom: 20px;
+  line-height: 115%;
+`
+export const ContentDescription = styled.p`
+  font-size: 12px;
+  font-weight: 300;
+  width: 424px;
+`
+export const ContentButton = styled.p`
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--cta-text-color);
+  text-decoration: none;
+  padding: 20px 55px;
+  display: inline-block;
+  border-radius: 8px;
+  background: #647aff;
+  transition: 1s;
+  &:hover {
+    background: var(--main-color);
+  }
+`
 export const BadgeCheckIcon = styled(BadgeCheck)`
   width: var(--icon-size);
   height: var(--icon-size);
