@@ -1,13 +1,14 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import { Container, Description } from './style'
 
 const Footer = () => {
   const data = useStaticQuery(query)
   const footer = data.markdownRemark.frontmatter.footer
   return (
-    <div>
-      <p>{footer.description}</p>
-    </div>
+    <Container>
+      <Description>{footer.description}</Description>
+    </Container>
   )
 }
 const query = graphql`

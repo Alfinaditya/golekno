@@ -1,14 +1,24 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
+import {
+  NewsLetterButton,
+  NewsLetterContainer,
+  NewsLetterInput,
+  NewsLetterSection,
+  NewsLetterTitle,
+} from './style'
 
 const NewsLetter = () => {
   const data = useStaticQuery(query)
   const newsLetter = data.markdownRemark.frontmatter.newsLetter
   return (
-    <div>
-      <h1>{newsLetter.title}</h1>
-      <button>{newsLetter.ctaText}</button>
-    </div>
+    <NewsLetterSection>
+      <NewsLetterContainer>
+        <NewsLetterTitle>{newsLetter.title}</NewsLetterTitle>
+        <NewsLetterInput placeholder={'Enter your email'} type='text' />
+        <NewsLetterButton>{newsLetter.ctaText}</NewsLetterButton>
+      </NewsLetterContainer>
+    </NewsLetterSection>
   )
 }
 const query = graphql`
