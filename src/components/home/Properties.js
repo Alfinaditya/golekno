@@ -1,27 +1,58 @@
 import React from 'react'
 import { graphql, Link, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
-
+import { Swiper, SwiperSlide } from 'swiper/react'
+import {
+  PropertiesDescription,
+  PropertiesTitle,
+  PropertiesContainer,
+  PropertyImage,
+  PropertyTitle,
+  PropertyLocation,
+  PropertyPrice,
+  PropertiesLink,
+  PropertiesSection,
+} from './style'
+import 'swiper/css'
 const Properties = () => {
   const data = useStaticQuery(query)
   const properties = data.markdownRemark.frontmatter.properties
   return (
-    <div>
-      <h1>{properties.title}</h1>
-      <p>{properties.description}</p>
-      <Link to={properties.ctaLink}>{properties.ctaText}</Link>
-      {properties.property.map(property => (
-        <div key={property.id}>
-          <h1>{property.title}</h1>
-          <p>{property.location}</p>
-          <p>{property.price}</p>
-          <GatsbyImage
-            image={getImage(property.image.childImageSharp.gatsbyImageData)}
-            alt={property.title}
-          />
-        </div>
-      ))}
-    </div>
+    <PropertiesSection>
+      <PropertiesTitle>Find your best place</PropertiesTitle>
+      <PropertiesDescription>
+        from apartment to exclusive mansion
+      </PropertiesDescription>
+      <PropertiesContainer>
+        <Swiper slidesPerView={4}>
+          {properties.property.map(property => (
+            <SwiperSlide>
+              <div key={property.id}>
+                <PropertyImage>
+                  <GatsbyImage
+                    image={getImage(
+                      property.image.childImageSharp.gatsbyImageData
+                    )}
+                    alt={property.title}
+                    style={{
+                      width: '100%',
+                      height: '100%',
+                      borderRadius: '34px',
+                    }}
+                  />
+                </PropertyImage>
+                <PropertyTitle>{property.title}</PropertyTitle>
+                <PropertyLocation>{property.location}</PropertyLocation>
+                <PropertyPrice>{property.price}</PropertyPrice>
+              </div>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </PropertiesContainer>
+      <PropertiesLink to={properties.ctaLink}>
+        {properties.ctaText}
+      </PropertiesLink>
+    </PropertiesSection>
   )
 }
 
