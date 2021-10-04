@@ -4,6 +4,7 @@ import {
   CurrencyDollar,
   UserGroup,
   CursorClick,
+  ArrowCircleUp,
 } from '@styled-icons/heroicons-solid'
 import { Link } from 'gatsby'
 
@@ -101,9 +102,13 @@ export const PropertiesLink = styled(Link)`
   text-align: right;
   margin-right: 20px;
 `
-export const PropertyContainer = styled.div`
+export const PropertyContainer = styled(Link)`
   margin: auto;
+  text-decoration: none;
+  display: block;
+  color: black;
   width: 278px;
+  background: red;
 `
 export const PropertyImage = styled.div`
   width: 278px;
@@ -249,7 +254,32 @@ export const NewsLetterInput = styled.input`
 export const NewsLetterButton = styled(ContentButton)`
   padding: 20px 30px;
 `
+// GotoTopButton
 
+export const TriangleIcon = styled.div`
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 0 9.44px 15.84px 9.44px;
+  border-color: transparent transparent white transparent;
+`
+export const ScrolltoTopButton = styled.button`
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  outline: none;
+  border: 0;
+  background: var(--main-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: 50px;
+  /* position: fixed;
+  right: 5vw;
+  bottom: 50px; */
+  cursor: pointer;
+`
 // icon
 
 export const BadgeCheckIcon = styled(BadgeCheck)`
@@ -268,6 +298,12 @@ export const UsersGroupIcon = styled(UserGroup)`
   color: var(--main-color);
 `
 export const CursorClickIcon = styled(CursorClick)`
+  width: var(--icon-size);
+  height: var(--icon-size);
+  color: var(--main-color);
+`
+
+export const ArrowCircleUpIcon = styled(ArrowCircleUp)`
   width: var(--icon-size);
   height: var(--icon-size);
   color: var(--main-color);

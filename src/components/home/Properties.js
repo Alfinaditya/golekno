@@ -31,7 +31,8 @@ const Properties = () => {
           {properties.property.map(property => (
             <SwiperSlide key={property.id}>
               <PropertyContainer
-                onClick={() => navigate(`/property/${property.slug}`)}
+                to={`/property/${property.slug}`}
+                // onClick={() => navigate(`/property/${property.slug}`)}
               >
                 <PropertyImage>
                   <GatsbyImage
