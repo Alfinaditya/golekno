@@ -1,12 +1,21 @@
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { Link } from 'gatsby'
 
 export const Nav = styled.nav`
-  background: var(--main-color);
+  ${props =>
+    props.location === 'home' &&
+    css`
+      background: var(--main-color);
+    `}
 `
 export const NavStyledLink = styled(Link)`
   text-decoration: none;
-  color: white;
+  color: var(--main-color);
+  ${props =>
+    props.location === 'home' &&
+    css`
+      color: white;
+    `}
   font-size: 19px;
   font-weight: 400;
 `
@@ -14,7 +23,12 @@ export const BrandLink = styled(Link)`
   font-size: 25px;
   font-weight: bold;
   text-decoration: none;
-  color: var(--cta-text-color);
+  color: var(--main-color);
+  ${props =>
+    props.location === 'home' &&
+    css`
+      color: white;
+    `}
 `
 export const Container = styled.div`
   width: 95%;

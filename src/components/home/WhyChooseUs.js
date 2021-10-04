@@ -21,7 +21,6 @@ const WhyChooseUs = () => {
   const whyChooseUs = data.markdownRemark.frontmatter.whyChooseUs
   const icon_1 = [<UsersGroupIcon />, <CurrencyDollarIcon />]
   const icon_2 = [<BadgeCheckIcon />, <CursorClickIcon />]
-  console.log(whyChooseUs)
   return (
     <WhyChooseUsSection>
       <WhyChooseUsImage>

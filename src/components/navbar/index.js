@@ -7,17 +7,30 @@ import {
   NavStyledLink,
   ContainerNavStyledLink,
 } from './style'
+import { useLocation } from '@reach/router'
+
+const ACTIVE_STYLE = {
+  fontWeight: '500',
+}
 
 const Navbar = () => {
   const data = useStaticQuery(query)
   const navLinks = data.markdownRemark.frontmatter.navbar
+  const path = useLocation().pathname
   return (
-    <Nav>
+    <Nav location={path !== '/' ? '' : 'home'}>
       <Container>
-        <BrandLink to='/'>Golekno</BrandLink>
+        <BrandLink location={path !== '/' ? '' : 'home'} to='/'>
+          Golekno
+        </BrandLink>
         <ContainerNavStyledLink>
           {navLinks.map(link => (
-            <NavStyledLink key={link.id} to={link.path}>
+            <NavStyledLink
+              location={path !== '/' ? '' : 'home'}
+              activeStyle={ACTIVE_STYLE}
+              key={link.id}
+              to={link.path}
+            >
               {link.name}
             </NavStyledLink>
           ))}

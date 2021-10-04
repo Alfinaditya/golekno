@@ -16,7 +16,6 @@ import {
 const Contents = () => {
   const data = useStaticQuery(query)
   const contents = data.markdownRemark.frontmatter
-  console.log(contents)
   return (
     <ContentsSection>
       <ContentOne>

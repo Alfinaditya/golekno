@@ -108,7 +108,6 @@ export const PropertyContainer = styled(Link)`
   display: block;
   color: black;
   width: 278px;
-  background: red;
 `
 export const PropertyImage = styled.div`
   width: 278px;
