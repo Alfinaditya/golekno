@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Swiper, SwiperSlide } from 'swiper/react'
+import { navigate } from '@reach/router'
 import {
   PropertiesDescription,
   PropertiesTitle,
@@ -29,7 +30,9 @@ const Properties = () => {
         <Swiper slidesPerView={4}>
           {properties.property.map(property => (
             <SwiperSlide key={property.id}>
-              <PropertyContainer>
+              <PropertyContainer
+                onClick={() => navigate(`/property/${property.slug}`)}
+              >
                 <PropertyImage>
                   <GatsbyImage
                     image={getImage(
@@ -76,6 +79,7 @@ const query = graphql`
             title
             location
             price
+            slug
             image {
               childImageSharp {
                 gatsbyImageData

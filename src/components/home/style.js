@@ -177,18 +177,18 @@ export const ContentDescription = styled.p`
   font-weight: 300;
   width: 424px;
 `
-export const ContentButton = styled.p`
+export const ContentButton = styled.button`
   cursor: pointer;
   margin-top: 20px;
   font-size: 15px;
   font-weight: 500;
   color: var(--cta-text-color);
-  text-decoration: none;
   padding: 20px 55px;
   display: inline-block;
   border-radius: 8px;
   background: #647aff;
   transition: 1s;
+  border: 0px;
   &:hover {
     background: var(--main-color);
   }
@@ -247,7 +247,7 @@ export const NewsLetterInput = styled.input`
 `
 
 export const NewsLetterButton = styled(ContentButton)`
-  padding: 20px 20px;
+  padding: 20px 30px;
 `
 
 // icon

@@ -1,5 +1,6 @@
 import React from 'react'
-import { useStaticQuery, graphql, Link } from 'gatsby'
+import { useStaticQuery, graphql } from 'gatsby'
+import { navigate } from '@reach/router'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import {
   ContentDescription,
@@ -15,6 +16,7 @@ import {
 const Contents = () => {
   const data = useStaticQuery(query)
   const contents = data.markdownRemark.frontmatter
+  console.log(contents)
   return (
     <ContentsSection>
       <ContentOne>
@@ -45,7 +47,7 @@ const Contents = () => {
           <ContentDescription>
             {contents.content_2.description}
           </ContentDescription>
-          <ContentButton to={contents.content_2.ctaLink}>
+          <ContentButton onClick={() => navigate('/properties')}>
             {contents.content_2.ctaText}
           </ContentButton>
         </ContentText>
