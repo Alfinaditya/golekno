@@ -6,6 +6,7 @@ import {
   PropertyDescription,
   PropertyPrice,
   PropertyTitle,
+  PropertyLocation,
 } from '../home/style'
 
 const PropertiesComponent = () => {
@@ -27,7 +28,7 @@ const PropertiesComponent = () => {
           <PropertyDescription>
             <div>
               <PropertyTitle>{property.title}</PropertyTitle>
-              <PropertyDescription>{property.location}</PropertyDescription>
+              <PropertyLocation>{property.location}</PropertyLocation>
             </div>
             <PropertyPrice>{property.price}</PropertyPrice>
           </PropertyDescription>

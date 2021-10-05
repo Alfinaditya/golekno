@@ -117,12 +117,13 @@ export const PropertyImage = styled.div`
 export const PropertyTitle = styled.h1`
   font-weight: bold;
   font-size: 14px;
-  margin-top: 20px;
 `
 export const PropertyDescription = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  margin-top: 20px;
+  padding: 0 10px;
 `
 export const PropertyLocation = styled.p`
   font-weight: 300;
