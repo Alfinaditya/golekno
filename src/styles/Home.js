@@ -29,6 +29,10 @@ export const HeroText = styled.div`
 export const HeroImage = styled.div`
   width: 624px;
   height: 523px;
+  @media only screen and (max-width: 1144px) {
+    width: 426px;
+    height: 498px;
+  }
 `
 export const HeroTitle = styled.h1`
   font-size: 64px;
@@ -71,6 +75,35 @@ export const WhyChooseUsReasonDescription = styled.p`
   width: 247px;
 `
 export const WhyChooseUsReasons = styled.div``
+
+// Counter
+
+export const CounterContainer = styled.div`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--jumbotron-color);
+  margin-bottom: 57px;
+  height: 356px;
+`
+export const PropertiesCountContainer = styled.div`
+  margin-right: 40px;
+  padding-right: 20px;
+  text-align: center;
+  border-right: 1px solid #f2f2f2;
+`
+export const CustomersCountContainer = styled.div`
+  margin-right: 40px;
+  padding-right: 20px;
+  text-align: center;
+  border-right: 1px solid #f2f2f2;
+`
+export const LocationsCountContainer = styled.div`
+  text-align: center;
+`
+export const StatisticCount = styled.h1`
+  color: var(--main-color);
+`
 
 // Properties
 
@@ -155,6 +188,10 @@ export const ContentsSection = styled.div`
 export const ContentImage = styled.div`
   width: 701px;
   height: 377px;
+  @media only screen and (max-width: 1270px) {
+    width: 500px;
+    height: 323px;
+  }
 `
 export const ContentText = styled.div``
 export const ContentOne = styled.div`
