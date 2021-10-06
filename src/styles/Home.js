@@ -263,10 +263,15 @@ export const ScrolltoTopButton = styled.button`
   justify-content: center;
   margin-left: auto;
   margin-right: 50px;
+  margin-bottom: 80px;
   /* position: fixed;
   right: 5vw;
   bottom: 50px; */
   cursor: pointer;
+  transition: 1s;
+  &:hover {
+    background: #647aff;
+  }
 `
 // icon
 
@@ -290,7 +295,6 @@ export const CursorClickIcon = styled(CursorClick)`
   height: var(--icon-size);
   color: var(--main-color);
 `
-
 export const ArrowCircleUpIcon = styled(ArrowCircleUp)`
   width: var(--icon-size);
   height: var(--icon-size);

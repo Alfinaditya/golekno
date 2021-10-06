@@ -40,7 +40,9 @@ export const PropertyDetailsPrice = styled.p`
   color: var(--main-color);
 `
 
-export const PropertyDetailsButton = styled(Button)``
+export const PropertyDetailsButton = styled(Button)`
+  margin: 40px 0;
+`
 export const CtaBack = styled.p`
   cursor: pointer;
   text-decoration: underline;
