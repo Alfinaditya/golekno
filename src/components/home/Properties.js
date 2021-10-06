@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -17,9 +17,15 @@ import {
 } from '../../styles/Home'
 
 import 'swiper/css'
+import UseScreenSize from '../../hooks/UseScreenSize'
 const Properties = () => {
   const data = useStaticQuery(query)
   const properties = data.markdownRemark.frontmatter.properties
+  const { size } = UseScreenSize()
+  const XXL = size.width >= '1876' ? 5 : false
+  const XL = size.width <= '1876' ? 4 : false
+  const L = size.width <= '1144' ? 3 : false
+  const SLIDE_PREVIEW = L || XL || XXL
   return (
     <PropertiesSection>
       <PropertiesTitle>Find your best place</PropertiesTitle>
@@ -27,7 +33,7 @@ const Properties = () => {
         From apartment to exclusive mansion
       </PropertiesDescription>
       <PropertiesContainer>
-        <Swiper slidesPerView={4}>
+        <Swiper slidesPerView={SLIDE_PREVIEW}>
           {properties.property.map(property => (
             <SwiperSlide key={property.id}>
               <PropertyContainer to={`/property/${property.slug}`}>

@@ -3,6 +3,7 @@ import Layout from '../components/Layout'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { graphql } from 'gatsby'
 import { PropertiesContainer, PropertyContainer } from '../styles/Properties'
+import GotoTopButton from '../components/GotoTopButton'
 import {
   PropertyDescription,
   PropertyPrice,
@@ -40,6 +41,7 @@ const Properties = ({ data }) => {
             </PropertyContainer>
           ))}
         </PropertiesContainer>
+        <GotoTopButton />
       </Layout>
     </div>
   )

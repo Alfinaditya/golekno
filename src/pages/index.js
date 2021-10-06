@@ -6,7 +6,7 @@ import Reviews from '../components/home/Reviews'
 import NewsLetter from '../components/home/NewsLetter'
 import Properties from '../components/home/Properties'
 import WhyChooseUs from '../components/home/WhyChooseUs'
-import GotoTopButton from '../components/home/GotoTopButton'
+import GotoTopButton from '../components/GotoTopButton'
 
 export default function Home() {
   return (
