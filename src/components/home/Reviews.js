@@ -12,7 +12,7 @@ import {
   ReviewMessage,
   ReviewName,
   ReviewSection,
-} from './style'
+} from '../../styles/Home'
 
 SwiperCore.use([Pagination])
 const Reviews = () => {

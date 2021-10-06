@@ -6,7 +6,7 @@ import {
   Nav,
   NavStyledLink,
   ContainerNavStyledLink,
-} from './style'
+} from '../styles/Navbar'
 import { useLocation } from '@reach/router'
 
 const ACTIVE_STYLE = {

@@ -1,7 +1,7 @@
 import React from 'react'
-import Footer from './footer'
-import GlobalStyle from './GlobalStyle'
-import Navbar from './navbar'
+import Footer from './Footer'
+import GlobalStyle from '../styles/GlobalStyle'
+import Navbar from './Navbar'
 
 const Layout = ({ children }) => {
   return (

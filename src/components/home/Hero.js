@@ -8,7 +8,8 @@ import {
   HeroDescription,
   HeroTitle,
   HeroText,
-} from './style'
+} from '../../styles/Home'
+
 const Hero = () => {
   const data = useStaticQuery(query)
   const hero = data.markdownRemark.frontmatter.hero

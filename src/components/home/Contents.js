@@ -11,7 +11,7 @@ import {
   ContentText,
   ContentTitle,
   ContentButton,
-} from './style'
+} from '../../styles/Home'
 
 const Contents = () => {
   const data = useStaticQuery(query)

@@ -7,6 +7,7 @@ import {
   ArrowCircleUp,
 } from '@styled-icons/heroicons-solid'
 import { Link } from 'gatsby'
+import { Button } from './shared/Button'
 
 // Hero
 
@@ -182,21 +183,8 @@ export const ContentDescription = styled.p`
   font-weight: 300;
   width: 424px;
 `
-export const ContentButton = styled.button`
-  cursor: pointer;
+export const ContentButton = styled(Button)`
   margin-top: 20px;
-  font-size: 15px;
-  font-weight: 500;
-  color: var(--cta-text-color);
-  padding: 20px 55px;
-  display: inline-block;
-  border-radius: 8px;
-  background: #647aff;
-  transition: 1s;
-  border: 0px;
-  &:hover {
-    background: var(--main-color);
-  }
 `
 // Reviews
 

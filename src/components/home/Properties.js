@@ -2,7 +2,6 @@ import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
 import { GatsbyImage, getImage } from 'gatsby-plugin-image'
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { navigate } from '@reach/router'
 import {
   PropertiesDescription,
   PropertiesTitle,
@@ -15,7 +14,8 @@ import {
   PropertiesSection,
   PropertyDescription,
   PropertyContainer,
-} from './style'
+} from '../../styles/Home'
+
 import 'swiper/css'
 const Properties = () => {
   const data = useStaticQuery(query)
@@ -30,10 +30,7 @@ const Properties = () => {
         <Swiper slidesPerView={4}>
           {properties.property.map(property => (
             <SwiperSlide key={property.id}>
-              <PropertyContainer
-                to={`/property/${property.slug}`}
-                // onClick={() => navigate(`/property/${property.slug}`)}
-              >
+              <PropertyContainer to={`/property/${property.slug}`}>
                 <PropertyImage>
                   <GatsbyImage
                     image={getImage(

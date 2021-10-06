@@ -1,5 +1,6 @@
 import React from 'react'
-import { ScrolltoTopButton, TriangleIcon } from './style'
+import { ScrolltoTopButton, TriangleIcon } from '../../styles/Home'
+
 const GotoTopButton = () => {
   return (
     <>

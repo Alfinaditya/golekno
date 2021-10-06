@@ -13,8 +13,8 @@ import {
   PropertyDetailsPrice,
   PropertyDetailsHeader,
   PropertyDetailsDescription,
-} from './style'
-import { ContentButton } from '../components/home/style'
+  PropertyDetailsButton,
+} from '../styles/PropertyDetails'
 
 const PropertyDetails = ({ data }) => {
   const propertyDetails = data.markdownRemark.frontmatter
@@ -47,7 +47,7 @@ const PropertyDetails = ({ data }) => {
         </PropertyDetailsHeader>
         <PropertyDetailsDescription>
           <p>{propertyDetails.description}</p>
-          <ContentButton>Buy Now</ContentButton>
+          <PropertyDetailsButton>Buy Now</PropertyDetailsButton>
         </PropertyDetailsDescription>
         <CtaBack onClick={() => navigate(-1)}>Back</CtaBack>
       </PropertyDetailsContainer>

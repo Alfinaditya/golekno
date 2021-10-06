@@ -1,6 +1,6 @@
 import React from 'react'
 import { graphql, useStaticQuery } from 'gatsby'
-import { Container, Description } from './style'
+import { Container, Description } from '../styles/Footer'
 
 const Footer = () => {
   const data = useStaticQuery(query)

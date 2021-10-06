@@ -1,5 +1,6 @@
 import styled from 'styled-components'
 import { Star } from '@styled-icons/heroicons-solid'
+import { Button } from './shared/Button'
 
 export const PropertyDetailsContainer = styled.div`
   width: 90%;
@@ -7,7 +8,6 @@ export const PropertyDetailsContainer = styled.div`
   margin-top: 100px;
 `
 export const PropertyDetailsTitle = styled.h1`
-  /* color: var(--black-color); */
   color: black;
   font-size: 36px;
   font-weight: bold;
@@ -39,6 +39,8 @@ export const PropertyDetailsPrice = styled.p`
   font-weight: bold;
   color: var(--main-color);
 `
+
+export const PropertyDetailsButton = styled(Button)``
 export const CtaBack = styled.p`
   cursor: pointer;
   text-decoration: underline;
