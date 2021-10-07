@@ -5,14 +5,12 @@ import {
   CustomersCountContainer,
   LocationsCountContainer,
   PropertiesCountContainer,
-  StatisticContainer,
   StatisticCount,
 } from '../../styles/Home'
 
 const Counter = () => {
   const data = useStaticQuery(query)
   const counter = data.markdownRemark.frontmatter
-  console.log(counter)
   return (
     <CounterContainer>
       <PropertiesCountContainer>

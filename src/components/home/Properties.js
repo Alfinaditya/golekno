@@ -25,7 +25,8 @@ const Properties = () => {
   const XXL = size.width >= '1876' ? 5 : false
   const XL = size.width <= '1876' ? 4 : false
   const L = size.width <= '1144' ? 3 : false
-  const SLIDE_PREVIEW = L || XL || XXL
+  const M = size.width <= '768' ? 2 : false
+  const SLIDE_PREVIEW = M || L || XL || XXL
   return (
     <PropertiesSection>
       <PropertiesTitle>Find your best place</PropertiesTitle>
