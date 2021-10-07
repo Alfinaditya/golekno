@@ -6,7 +6,7 @@ import {
   LocationsCountContainer,
   PropertiesCountContainer,
   StatisticCount,
-} from '../../styles/Home'
+} from '../../styles/home/Counter'
 
 const Counter = () => {
   const data = useStaticQuery(query)

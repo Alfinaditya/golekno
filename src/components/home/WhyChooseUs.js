@@ -14,7 +14,7 @@ import {
   WhyChooseUsReasonDescription,
   ReasonOne,
   ReasonTwo,
-} from '../../styles/Home'
+} from '../../styles/home/WhyChooseUs'
 
 const WhyChooseUs = () => {
   const data = useStaticQuery(query)

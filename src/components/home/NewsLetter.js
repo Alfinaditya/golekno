@@ -6,7 +6,7 @@ import {
   NewsLetterInput,
   NewsLetterSection,
   NewsLetterTitle,
-} from '../../styles/Home'
+} from '../../styles/home/NewsLetter'
 
 const NewsLetter = () => {
   const data = useStaticQuery(query)

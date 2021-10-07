@@ -9,7 +9,7 @@ import {
   PropertyPrice,
   PropertyTitle,
   PropertyLocation,
-} from '../styles/Home'
+} from '../styles/home/Properties'
 
 const Properties = ({ data }) => {
   const properties = data.markdownRemark.frontmatter.properties.property

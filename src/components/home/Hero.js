@@ -8,7 +8,7 @@ import {
   HeroDescription,
   HeroTitle,
   HeroText,
-} from '../../styles/Home'
+} from '../../styles/home/Hero'
 
 const Hero = () => {
   const data = useStaticQuery(query)
