@@ -12,15 +12,16 @@ export const CounterContainer = styled.div`
     justify-content: space-between;
     border-top: 1px solid #f2f2f2;
     border-bottom: 1px solid #f2f2f2;
-    /* padding: 20px 0; */
   }
 `
-export const PropertiesCountContainer = styled.div`
-  margin-right: 20px;
+export const StatisticsContainer = styled.div`
   width: 327px;
   display: flex;
   flex-direction: column;
   align-items: center;
+`
+export const PropertiesCountContainer = styled(StatisticsContainer)`
+  margin-right: 20px;
   border-right: 1px solid #f2f2f2;
   @media only screen and (max-width: 768px) {
     width: 100%;
@@ -29,12 +30,8 @@ export const PropertiesCountContainer = styled.div`
     margin: 0;
   }
 `
-export const CustomersCountContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+export const CustomersCountContainer = styled(StatisticsContainer)`
   margin-right: 20px;
-  width: 327px;
   border-right: 1px solid #f2f2f2;
   @media only screen and (max-width: 768px) {
     margin: 0;
@@ -43,11 +40,7 @@ export const CustomersCountContainer = styled.div`
     border-bottom: 1px solid #f2f2f2;
   }
 `
-export const LocationsCountContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 327px;
+export const LocationsCountContainer = styled(StatisticsContainer)`
   @media only screen and (max-width: 768px) {
     width: 100%;
   }

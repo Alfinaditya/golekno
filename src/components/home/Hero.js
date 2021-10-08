@@ -8,6 +8,7 @@ import {
   HeroDescription,
   HeroTitle,
   HeroText,
+  HeroOverlay,
 } from '../../styles/home/Hero'
 
 const Hero = () => {
@@ -15,6 +16,7 @@ const Hero = () => {
   const hero = data.markdownRemark.frontmatter.hero
   return (
     <HeroSection>
+      <HeroOverlay />
       <HeroContainer>
         <HeroText>
           <HeroTitle>{hero.title}</HeroTitle>

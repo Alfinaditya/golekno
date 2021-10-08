@@ -12,14 +12,15 @@ export const WhyChooseUsSection = styled.div`
   align-items: center;
   justify-content: space-around;
   margin: 200px 0;
-  @media only screen and (max-width: 768px) {
-    margin-top: 550px;
-  }
 `
 export const WhyChooseUsImage = styled.div`
   width: 401px;
   height: 577px;
-  @media only screen and (max-width: 768px) {
+
+  @media only screen and (max-width: 1024px) {
+    margin-right: 40px;
+  }
+  @media only screen and (max-width: 1002px) {
     display: none;
   }
 `

@@ -13,13 +13,18 @@ export const ContentImage = styled.div`
     width: 500px;
     height: 323px;
   }
-  @media only screen and (max-width: 768px) {
+  /* @media only screen and (max-width: 768px) {
     margin: auto;
     margin-bottom: 40px;
     width: 95%;
+  } */
+`
+export const ContentText = styled.div`
+  width: 701px;
+  @media only screen and (max-width: 896px) {
+    width: 500px;
   }
 `
-export const ContentText = styled.div``
 export const ContentOne = styled.div`
   display: flex;
   align-items: center;
@@ -30,8 +35,10 @@ export const ContentOne = styled.div`
   div:nth-child(1) {
     margin-right: 60px;
   }
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 896px) {
     flex-direction: column;
+    text-align: center;
+    margin-bottom: 100px;
     div:nth-child(1) {
       margin-right: 0;
       margin-left: 0;
@@ -43,8 +50,9 @@ export const ContentTwo = styled.div`
   align-items: center;
   justify-content: center;
   padding: 30px;
-  @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 896px) {
     flex-direction: column-reverse;
+    text-align: center;
   }
 `
 export const ContentTitle = styled.h1`
@@ -53,12 +61,22 @@ export const ContentTitle = styled.h1`
   width: 514px;
   margin-bottom: 20px;
   line-height: 115%;
+  @media only screen and (max-width: 896px) {
+    margin-top: 70px;
+  }
 `
 export const ContentDescription = styled.p`
   font-size: 12px;
   font-weight: 300;
   width: 424px;
+  @media only screen and (max-width: 896px) {
+    width: 100%;
+    margin-top: 20px;
+  }
 `
 export const ContentButton = styled(Button)`
   margin-top: 20px;
+  @media only screen and (max-width: 896px) {
+    margin-top: 30px;
+  }
 `

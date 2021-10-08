@@ -10,7 +10,6 @@ export const NewsLetterContainer = styled.div`
   margin: auto;
   padding: 85px 0;
   text-align: center;
-  background: red;
   @media only screen and (max-width: 768px) {
     width: 90%;
   }

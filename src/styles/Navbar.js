@@ -37,6 +37,9 @@ export const Container = styled.div`
   align-items: center;
   justify-content: space-between;
   padding-top: 20px;
+  @media only screen and (max-width: 1064px) {
+    display: none;
+  }
 `
 export const ContainerNavStyledLink = styled.div`
   width: 50%;
