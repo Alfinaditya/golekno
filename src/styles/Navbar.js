@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { Link } from 'gatsby'
+import { BrandLink, NavLink } from './shared/Link'
 
 export const Nav = styled.nav`
   ${props =>
@@ -8,21 +8,15 @@ export const Nav = styled.nav`
       background: var(--main-color);
     `}
 `
-export const NavStyledLink = styled(Link)`
-  text-decoration: none;
+export const NavStyledLink = styled(NavLink)`
   color: var(--main-color);
   ${props =>
     props.location === 'home' &&
     css`
       color: white;
     `}
-  font-size: 19px;
-  font-weight: 400;
 `
-export const BrandLink = styled(Link)`
-  font-size: 25px;
-  font-weight: bold;
-  text-decoration: none;
+export const BrandStyledLink = styled(BrandLink)`
   color: var(--main-color);
   ${props =>
     props.location === 'home' &&

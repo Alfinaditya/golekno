@@ -10,13 +10,16 @@ import {
 export const WhyChooseUsSection = styled.div`
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: center;
   margin: 200px 0;
+  @media only screen and (max-width: 768px) {
+    margin: 100px 0;
+  }
 `
 export const WhyChooseUsImage = styled.div`
   width: 401px;
   height: 577px;
-
+  margin-right: 100px;
   @media only screen and (max-width: 1024px) {
     margin-right: 40px;
   }

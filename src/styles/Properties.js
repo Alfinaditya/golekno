@@ -16,4 +16,7 @@ export const PropertiesContainer = styled.div`
   align-items: center;
   justify-content: space-between;
   margin-top: 150px;
+  @media only screen and (max-width: 1189px) {
+    justify-content: center;
+  }
 `

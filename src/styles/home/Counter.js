@@ -9,6 +9,7 @@ export const CounterContainer = styled.div`
   height: 356px;
   @media only screen and (max-width: 768px) {
     flex-direction: column;
+    margin-bottom: 100px;
     justify-content: space-between;
     border-top: 1px solid #f2f2f2;
     border-bottom: 1px solid #f2f2f2;

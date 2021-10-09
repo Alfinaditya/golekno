@@ -25,6 +25,9 @@ const Contents = () => {
               contents.content_1.image.childImageSharp.gatsbyImageData
             )}
             alt={contents.content_1.title}
+            imgStyle={{
+              objectFit: 'cover',
+            }}
             style={{
               width: '100%',
               height: '100%',
@@ -56,6 +59,9 @@ const Contents = () => {
               contents.content_2.image.childImageSharp.gatsbyImageData
             )}
             alt={contents.content_1.title}
+            imgStyle={{
+              objectFit: 'cover',
+            }}
             style={{
               width: '100%',
               height: '100%',

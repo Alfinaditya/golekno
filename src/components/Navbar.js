@@ -1,11 +1,11 @@
 import { graphql, useStaticQuery } from 'gatsby'
 import React from 'react'
 import {
-  BrandLink,
   Container,
   Nav,
   NavStyledLink,
   ContainerNavStyledLink,
+  BrandStyledLink,
 } from '../styles/Navbar'
 import { useLocation } from '@reach/router'
 
@@ -20,9 +20,9 @@ const Navbar = () => {
   return (
     <Nav location={path !== '/' ? '' : 'home'}>
       <Container>
-        <BrandLink location={path !== '/' ? '' : 'home'} to='/'>
+        <BrandStyledLink location={path !== '/' ? '' : 'home'} to='/'>
           Golekno
-        </BrandLink>
+        </BrandStyledLink>
         <ContainerNavStyledLink>
           {navLinks.map(link => (
             <NavStyledLink

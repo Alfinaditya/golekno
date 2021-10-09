@@ -25,6 +25,9 @@ const Properties = ({ data }) => {
               <GatsbyImage
                 image={getImage(property.image.childImageSharp.gatsbyImageData)}
                 alt={property.title}
+                imgStyle={{
+                  objectFit: 'cover',
+                }}
                 style={{
                   width: '100%',
                   height: '373px',
