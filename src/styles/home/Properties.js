@@ -9,6 +9,9 @@ export const PropertiesTitle = styled.h1`
   font-weight: bold;
   color: var(--main-color);
   text-align: center;
+  @media only screen and (max-width: 455px) {
+    font-size: 25px;
+  }
 `
 export const PropertiesDescription = styled.p`
   font-weight: 400;

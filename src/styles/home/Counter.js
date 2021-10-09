@@ -12,6 +12,7 @@ export const CounterContainer = styled.div`
     justify-content: space-between;
     border-top: 1px solid #f2f2f2;
     border-bottom: 1px solid #f2f2f2;
+    height: 100%;
   }
 `
 export const StatisticsContainer = styled.div`
@@ -19,14 +20,17 @@ export const StatisticsContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    padding-bottom: 40px;
+    padding-top: 20px;
+  }
 `
 export const PropertiesCountContainer = styled(StatisticsContainer)`
   margin-right: 20px;
   border-right: 1px solid #f2f2f2;
   @media only screen and (max-width: 768px) {
-    width: 100%;
     border-bottom: 1px solid #f2f2f2;
-    padding-bottom: 20px;
     margin: 0;
   }
 `
@@ -35,16 +39,10 @@ export const CustomersCountContainer = styled(StatisticsContainer)`
   border-right: 1px solid #f2f2f2;
   @media only screen and (max-width: 768px) {
     margin: 0;
-    padding-bottom: 20px;
-    width: 100%;
     border-bottom: 1px solid #f2f2f2;
   }
 `
-export const LocationsCountContainer = styled(StatisticsContainer)`
-  @media only screen and (max-width: 768px) {
-    width: 100%;
-  }
-`
+export const LocationsCountContainer = styled(StatisticsContainer)``
 export const StatisticCount = styled.h1`
   color: var(--main-color);
 `

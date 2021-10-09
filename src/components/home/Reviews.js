@@ -45,7 +45,6 @@ const Reviews = () => {
             </ReviewContainer>
           </SwiperSlide>
         ))}
-        <div>...</div>
       </Swiper>
     </ReviewSection>
   )

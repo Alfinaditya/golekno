@@ -12,8 +12,9 @@ import {
   WhyChooseUsTitle,
   WhyChooseUsReasonTitle,
   WhyChooseUsReasonDescription,
-  ReasonOne,
   ReasonTwo,
+  ReasonOne,
+  WhyChooseUsReasonContainer,
 } from '../../styles/home/WhyChooseUs'
 
 const WhyChooseUs = () => {
@@ -35,25 +36,25 @@ const WhyChooseUs = () => {
 
         <ReasonOne>
           {whyChooseUs.reason_1.map((reason, i) => (
-            <div key={reason.id}>
+            <WhyChooseUsReasonContainer key={reason.id}>
               {icon_1[i]}
               <WhyChooseUsReasonTitle>{reason.title}</WhyChooseUsReasonTitle>
               <WhyChooseUsReasonDescription>
                 {reason.description}
               </WhyChooseUsReasonDescription>
-            </div>
+            </WhyChooseUsReasonContainer>
           ))}
         </ReasonOne>
 
         <ReasonTwo>
           {whyChooseUs.reason_2.map((reason, i) => (
-            <div key={reason.id}>
+            <WhyChooseUsReasonContainer key={reason.id}>
               {icon_2[i]}
               <WhyChooseUsReasonTitle>{reason.title}</WhyChooseUsReasonTitle>
               <WhyChooseUsReasonDescription>
                 {reason.description}
               </WhyChooseUsReasonDescription>
-            </div>
+            </WhyChooseUsReasonContainer>
           ))}
         </ReasonTwo>
       </WhyChooseUsReasons>

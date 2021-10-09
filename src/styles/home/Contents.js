@@ -8,21 +8,22 @@ export const ContentsSection = styled.div`
 export const ContentImage = styled.div`
   width: 701px;
   height: 377px;
-
   @media only screen and (max-width: 1270px) {
     width: 500px;
     height: 323px;
   }
-  /* @media only screen and (max-width: 768px) {
+  @media only screen and (max-width: 524px) {
     margin: auto;
-    margin-bottom: 40px;
-    width: 95%;
-  } */
+    width: 80%;
+  }
 `
 export const ContentText = styled.div`
   width: 701px;
   @media only screen and (max-width: 896px) {
     width: 500px;
+  }
+  @media only screen and (max-width: 500px) {
+    width: 90%;
   }
 `
 export const ContentOne = styled.div`
@@ -64,6 +65,13 @@ export const ContentTitle = styled.h1`
   @media only screen and (max-width: 896px) {
     margin-top: 70px;
   }
+  @media only screen and (max-width: 896px) {
+    margin-top: 70px;
+  }
+  @media only screen and (max-width: 524px) {
+    font-size: 25px;
+    width: 100%;
+  }
 `
 export const ContentDescription = styled.p`
   font-size: 12px;
@@ -72,6 +80,10 @@ export const ContentDescription = styled.p`
   @media only screen and (max-width: 896px) {
     width: 100%;
     margin-top: 20px;
+  }
+  @media only screen and (max-width: 524px) {
+    margin: auto;
+    width: 90%;
   }
 `
 export const ContentButton = styled(Button)`

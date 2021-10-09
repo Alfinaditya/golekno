@@ -9,6 +9,9 @@ export const ReviewContainer = styled.div`
   margin: auto;
   text-align: center;
   width: 60%;
+  @media only screen and (max-width: 524px) {
+    width: 90%;
+  }
 `
 export const ReviewMessage = styled.p`
   margin: 30px 0;
