@@ -11,11 +11,15 @@ export const PropertyDetailsTitle = styled.h1`
   color: black;
   font-size: 36px;
   font-weight: bold;
+  @media only screen and (max-width: 768px) {
+    font-size: 22px;
+  }
 `
 export const PropertyDetailsLocation = styled.p`
   font-size: 36px;
   font-weight: 400;
   font-size: 18px;
+  margin-bottom: 10px;
   color: #969696;
 `
 export const PropertyDetailsReview = styled.div`
@@ -38,8 +42,19 @@ export const PropertyDetailsPrice = styled.p`
   font-size: 25px;
   font-weight: bold;
   color: var(--main-color);
+  @media only screen and (max-width: 768px) {
+    font-size: 22px;
+  }
 `
-
+export const PropertyDetailsImage = styled.div`
+  width: 100%;
+  @media only screen and (max-width: 928px) {
+    height: 350px;
+  }
+  @media only screen and (max-width: 461px) {
+    height: 250px;
+  }
+`
 export const PropertyDetailsButton = styled(Button)`
   margin: 40px 0;
 `
@@ -48,7 +63,6 @@ export const CtaBack = styled.p`
   text-decoration: underline;
   color: var(--main-color);
 `
-
 export const StarIcon = styled(Star)`
   color: #ffb92d;
   width: 28px;

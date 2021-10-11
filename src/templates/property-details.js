@@ -14,6 +14,7 @@ import {
   PropertyDetailsHeader,
   PropertyDetailsDescription,
   PropertyDetailsButton,
+  PropertyDetailsImage,
 } from '../styles/PropertyDetails'
 
 const PropertyDetails = ({ data }) => {
@@ -21,17 +22,22 @@ const PropertyDetails = ({ data }) => {
   return (
     <Layout>
       <PropertyDetailsContainer>
-        <GatsbyImage
-          image={getImage(
-            propertyDetails.image.childImageSharp.gatsbyImageData
-          )}
-          alt={propertyDetails.title}
-          style={{
-            width: '100%',
-            height: '479px',
-            borderRadius: '34px',
-          }}
-        />
+        <PropertyDetailsImage>
+          <GatsbyImage
+            image={getImage(
+              propertyDetails.image.childImageSharp.gatsbyImageData
+            )}
+            alt={propertyDetails.title}
+            imgStyle={{
+              objectFit: 'cover',
+            }}
+            style={{
+              width: '100%',
+              height: '100%',
+              borderRadius: '34px',
+            }}
+          />
+        </PropertyDetailsImage>
         <PropertyDetailsHeader>
           <div>
             <PropertyDetailsTitle>{propertyDetails.title}</PropertyDetailsTitle>

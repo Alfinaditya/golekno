@@ -8,6 +8,14 @@ export const PropertyContainer = styled(Link)`
   text-decoration: none;
   color: black;
 `
+export const PropertiesImage = styled.div`
+  width: 100%;
+  height: 373px;
+  border-radius: 34px;
+  &:hover {
+    opacity: 0.3;
+  }
+`
 export const PropertiesContainer = styled.div`
   display: flex;
   flex-wrap: wrap;

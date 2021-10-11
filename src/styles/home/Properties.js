@@ -44,6 +44,9 @@ export const PropertyImage = styled.div`
   width: 278px;
   height: 367px;
   margin: auto;
+  &:hover {
+    opacity: 0.3;
+  }
 `
 export const PropertyTitle = styled.h1`
   font-weight: bold;
