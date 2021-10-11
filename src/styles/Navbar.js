@@ -3,23 +3,23 @@ import { BrandLink, NavLink } from './shared/Link'
 
 export const Nav = styled.nav`
   ${props =>
-    props.location === 'home' &&
+    props.ishome === 1 &&
     css`
       background: var(--main-color);
     `}
 `
 export const NavStyledLink = styled(NavLink)`
-  color: var(--main-color);
+  color: white;
   ${props =>
-    props.location === 'home' &&
+    props.ishome === 1 &&
     css`
-      color: white;
+      color: var(--main-color);
     `}
 `
 export const BrandStyledLink = styled(BrandLink)`
   color: var(--main-color);
   ${props =>
-    props.location === 'home' &&
+    props.ishome === 1 &&
     css`
       color: white;
     `}

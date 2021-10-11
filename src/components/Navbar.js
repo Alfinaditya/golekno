@@ -18,15 +18,15 @@ const Navbar = () => {
   const navLinks = data.markdownRemark.frontmatter.navbar
   const path = useLocation().pathname
   return (
-    <Nav location={path !== '/' ? '' : 'home'}>
+    <Nav ishome={path === '/' ? 1 : 0}>
       <Container>
-        <BrandStyledLink location={path !== '/' ? '' : 'home'} to='/'>
+        <BrandStyledLink ishome={path === '/' ? 1 : 0} to='/'>
           Golekno
         </BrandStyledLink>
         <ContainerNavStyledLink>
           {navLinks.map(link => (
             <NavStyledLink
-              location={path !== '/' ? '' : 'home'}
+              ishome={path !== '/' ? 1 : 0}
               activeStyle={ACTIVE_STYLE}
               key={link.id}
               to={link.path}
