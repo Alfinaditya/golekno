@@ -7,12 +7,14 @@ import {
   ErrorStatusNumber,
   ErrorContainer,
 } from '../styles/404'
+import Seo from '../components/Seo'
 
 const NotFound = ({ data }) => {
   const error = data.markdownRemark.frontmatter
   return (
     <div>
       <Layout>
+        <Seo title='Page Not Found' description={error.description} />
         <ErrorContainer>
           <ErrorStatusNumber>{error.name}</ErrorStatusNumber>
           <ErrorDescription>{error.description}</ErrorDescription>
