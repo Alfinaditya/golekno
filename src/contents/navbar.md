@@ -1,5 +1,7 @@
 ---
 name: navbar
+brandName: Golekno
+brandLink: /
 navbar:
   [
     { id: 1, name: 'Home', path: '/' },

@@ -14,12 +14,14 @@ import {
   PropertyTitle,
   PropertyLocation,
 } from '../styles/home/Properties'
+import Seo from '../components/Seo'
 
 const Properties = ({ data }) => {
   const properties = data.markdownRemark.frontmatter.properties.property
   return (
     <div>
       <Layout>
+        <Seo title='Properties' />
         <PropertiesContainer>
           {properties.map(property => (
             <PropertyContainer

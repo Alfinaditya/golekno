@@ -16,11 +16,13 @@ import {
   PropertyDetailsButton,
   PropertyDetailsImage,
 } from '../styles/PropertyDetails'
+import Seo from '../components/Seo'
 
 const PropertyDetails = ({ data }) => {
   const propertyDetails = data.markdownRemark.frontmatter
   return (
     <Layout>
+      <Seo title={propertyDetails.title} />
       <PropertyDetailsContainer>
         <PropertyDetailsImage>
           <GatsbyImage

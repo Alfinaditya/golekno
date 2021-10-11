@@ -8,11 +8,13 @@ import Properties from '../components/home/Properties'
 import WhyChooseUs from '../components/home/WhyChooseUs'
 import GotoTopButton from '../components/GotoTopButton'
 import Counter from '../components/home/Counter'
+import Seo from '../components/Seo'
 
 export default function Home() {
   return (
     <div>
       <Layout>
+        <Seo title='Home' />
         <Hero />
         <WhyChooseUs />
         <Counter />

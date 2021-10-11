@@ -10,6 +10,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`, // Needed for dynamic images
+    `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -28,4 +29,11 @@ module.exports = {
     `gatsby-transformer-remark`,
     `gatsby-plugin-styled-components`,
   ],
+  siteMetadata: {
+    title: 'Golekno',
+    description:
+      'Golekno is a real estate company which helps you to find a better place for living',
+    image: 'src/images/home/hero.jpg',
+    url: 'https://golekno.netlify.app',
+  },
 }

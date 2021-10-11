@@ -15,7 +15,7 @@ const ACTIVE_STYLE = {
 }
 const MobileNavbar = () => {
   const data = useStaticQuery(query)
-  const navLinks = data.markdownRemark.frontmatter.navbar
+  const navLinks = data.markdownRemark.frontmatter
   const [open, setOpen] = useState(true)
   const path = useLocation().pathname
   return (
@@ -25,10 +25,13 @@ const MobileNavbar = () => {
       </HamburgerMenuContainer>
       {open && (
         <MobileLinks ishome={path === '/' ? 1 : 0}>
-          <MobileBrandStyledLink ishome={path === '/' ? 1 : 0} to='/'>
-            Golekno
+          <MobileBrandStyledLink
+            ishome={path === '/' ? 1 : 0}
+            to={navLinks.brandLink}
+          >
+            {navLinks.brandName}
           </MobileBrandStyledLink>
-          {navLinks.map(link => (
+          {navLinks.navbar.map(link => (
             <MobileNavStyledLink
               ishome={path === '/' ? 1 : 0}
               activeStyle={ACTIVE_STYLE}
@@ -50,6 +53,8 @@ const query = graphql`
   query MobileNavbarQuery {
     markdownRemark(frontmatter: { name: { eq: "navbar" } }) {
       frontmatter {
+        brandName
+        brandLink
         navbar {
           id
           name

@@ -15,16 +15,16 @@ const ACTIVE_STYLE = {
 
 const Navbar = () => {
   const data = useStaticQuery(query)
-  const navLinks = data.markdownRemark.frontmatter.navbar
+  const navLinks = data.markdownRemark.frontmatter
   const path = useLocation().pathname
   return (
     <Nav ishome={path === '/' ? 1 : 0}>
       <Container>
-        <BrandStyledLink ishome={path === '/' ? 1 : 0} to='/'>
-          Golekno
+        <BrandStyledLink ishome={path === '/' ? 1 : 0} to={navLinks.brandLink}>
+          {navLinks.brandName}
         </BrandStyledLink>
         <ContainerNavStyledLink>
-          {navLinks.map(link => (
+          {navLinks.navbar.map(link => (
             <NavStyledLink
               ishome={path !== '/' ? 1 : 0}
               activeStyle={ACTIVE_STYLE}
@@ -46,6 +46,8 @@ const query = graphql`
   query NavbarQuery {
     markdownRemark(frontmatter: { name: { eq: "navbar" } }) {
       frontmatter {
+        brandName
+        brandLink
         navbar {
           id
           name
