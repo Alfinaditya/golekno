@@ -10,4 +10,7 @@ export const AboutDescrition = styled.p`
 export const AboutContainer = styled.div`
   margin-top: 200px;
   text-align: center;
+  @media only screen and (max-width: 489px) {
+    padding: 10px;
+  }
 `
