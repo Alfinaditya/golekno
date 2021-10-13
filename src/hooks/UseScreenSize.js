@@ -1,16 +1,17 @@
 import { useState, useEffect } from 'react'
 
+const windowGlobal = typeof window !== 'undefined' && window
 const UseScreenSize = () => {
   const [size, setSize] = useState({
-    width: window.innerWidth,
-    height: window.innerHeight,
+    width: windowGlobal.innerWidth,
+    height: windowGlobal.innerHeight,
   })
   const updateSize = () =>
     setSize({
-      width: window.innerWidth,
-      height: window.innerHeight,
+      width: windowGlobal.innerWidth,
+      height: windowGlobal.innerHeight,
     })
-  useEffect(() => (window.onresize = updateSize), [])
+  useEffect(() => (windowGlobal.onresize = updateSize), [])
   return { size, setSize }
 }
 
