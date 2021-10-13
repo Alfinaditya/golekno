@@ -16,7 +16,7 @@ const ACTIVE_STYLE = {
 const MobileNavbar = () => {
   const data = useStaticQuery(query)
   const navLinks = data.markdownRemark.frontmatter
-  const [open, setOpen] = useState(true)
+  const [open, setOpen] = useState(false)
   const path = useLocation().pathname
   return (
     <MobileNav>
