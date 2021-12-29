@@ -15,7 +15,7 @@ const Seo = ({ title, description, image }) => {
     image: `${siteUrl}${image || defaultImage}`,
     url: `${siteUrl}${pathname}`,
   }
-
+  console.log(seo)
   return (
     <div>
       <Helmet title={seo.title}>
